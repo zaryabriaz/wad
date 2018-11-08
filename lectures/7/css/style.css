@@ -1,6 +1,11 @@
 #main {
-    /* add CSS here */
+    max-width:400px;
+    margin:auto;
+
 }
 .pet {
-    /* add CSS here */
+    border: 4px dashed #fa0047;
+    border-radius: 12px;
+    box-shadow:7px 5px 7px 7px #cccccc;
+    font-style: italic;
 }
