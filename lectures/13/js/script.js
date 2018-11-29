@@ -27,11 +27,20 @@ var quizOver = false;
 displayCurrentQuestion();
 document.getElementById("quiz-message").style.display = 'none';
 function displayNext() {
-    /*Write your code here */
+    document.getElementById("question").innerText=questions[0].question;
+
+
+    for (var i=0; i<4; i++){
+
+        document.getElementById("choice-list").innerHTML+='<li>'+ questions[0].choices[i] + '</li>';
+
+    }
+    displayCurrentQuestion();
 }
 
 function displayCurrentQuestion() {
-    /*Write your code here */
+
+
 }
 
 function resetQuiz() {
