@@ -1,3 +1,7 @@
+<?php
+require("../server/connect_db.php");
+require("../server/function.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,11 +43,17 @@
                     </div>
                     <select class="form-control" id="pro_cat" name="pro_cat">
                         <option>Select Category</option>
-                        <option>Mobile</option>
-                        <option>Laptop</option>
-                        <option>Tablet</option>
-                        <option>Watch</option>
-                        <option>Camera</option>
+                        <?php
+                        $temp=getcategories();
+                        for($i=0;$i<mysqli_num_rows($temp);$i++)
+                        {
+                            $row=mysqli_fetch_assoc($temp);
+                        echo "<option>" .$row[cname]."</option>";
+                        }
+
+
+
+                        ?>
                     </select>
                 </div>
             </div>
@@ -59,13 +69,16 @@
                     </div>
                     <select class="form-control" id="pro_brand" name="pro_brand">
                         <option>Select Brand</option>
-                        <option>Apple</option>
-                        <option>Samsung</option>
-                        <option>Oppo</option>
-                        <option>Dell</option>
-                        <option>HP</option>
-                        <option>Sony</option>
-                    </select>
+
+                        <?php
+                        $temp=getbrand();
+                        for($i=0;$i<mysqli_num_rows($temp);$i++)
+                        {
+                            $row=mysqli_fetch_assoc($temp);
+                            echo "<option>" .$row[bname]."</option>";
+                        }
+
+                        ?>
                 </div>
             </div>
             <div class="">
