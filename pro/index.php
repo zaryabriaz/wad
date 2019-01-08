@@ -1,7 +1,3 @@
-<?php
-require("server/connect_db.php");
-require("server/function.php");
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +15,7 @@ require("server/function.php");
     <div class="row">
         <div class="col-12 no-padding">
             <nav class="navbar navbar-light bg-light navbar-expand-sm fixed-top">
-                <a class="navbar-brand" href="index.php"><img src="media/logo.png" width="175" height="50" alt="logo">
+                <a class="navbar-brand" href="index.html"><img src="media/logo.png" width="175" height="50" alt="logo">
                 </a>
                 <button class="navbar-toggler" type="button"
                         data-toggle="collapse"
@@ -42,13 +38,13 @@ require("server/function.php");
                     <div class="col-lg-3 col-md-4 col-sm-5">
                         <ul class="navbar-nav mr-auto mt-2 mt-lg-0 float-sm-right">
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.php"><i class="fas fa-heart sc-color fa-2x"></i></a>
+                                <a class="nav-link" href="index.html"><i class="fas fa-heart sc-color fa-2x"></i></a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.php"><i class="fas fa-shopping-cart sc-color fa-2x"></i></a>
+                                <a class="nav-link" href="index.html"><i class="fas fa-shopping-cart sc-color fa-2x"></i></a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.php"> <span class="sc-fs">Login </span></a>
+                                <a class="nav-link" href="index.html"> <span class="sc-fs">Login </span></a>
                             </li>
                         </ul>
                     </div>
@@ -68,27 +64,18 @@ require("server/function.php");
                     Categories
                 </a>
                 <ul class="collapse show list-unstyled" id="homeSubmenu">
-<!--                    <li>-->
-<!--                        <a class="nav-link"  href="#">Laptops</a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a class="nav-link"  href="#">Computers</a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a class="nav-link"  href="#">Mobiles</a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a class="nav-link"  href="#">Tablets</a>-->
-<!--                    </li>-->
-                    <?php
-                    $temp=getcategories();
-                    for($i=0;$i<mysqli_num_rows($temp);$i++)
-                    {
-                        $row=mysqli_fetch_assoc($temp);
-
-                         echo "<li> <a class='nav-link'  href='#'>" . $row['cname'] . "</a></li>" ;
-                    }
-                    ?>
+                    <li>
+                        <a class="nav-link"  href="#">Laptops</a>
+                    </li>
+                    <li>
+                        <a class="nav-link"  href="#">Computers</a>
+                    </li>
+                    <li>
+                        <a class="nav-link"  href="#">Mobiles</a>
+                    </li>
+                    <li>
+                        <a class="nav-link"  href="#">Tablets</a>
+                    </li>
                 </ul>
             </li>
             <li class="active">
@@ -97,13 +84,18 @@ require("server/function.php");
                     Brands
                 </a>
                 <ul class="collapse show list-unstyled" id="pageSubmenu">
-                    <?php
-                    $temp = getbrand();
-                    for ($i = 0; $i < mysqli_num_rows($temp); $i++) {
-                        $row = mysqli_fetch_assoc($temp);
-                        echo "<li> <a class='nav-link'  href='#'>" . $row['bname'] . "</a></li>" ;
-                    }
-                    ?>
+                    <li>
+                        <a class="nav-link" href="#">Apple</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">Sony</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">Dell</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">Toshiba</a>
+                    </li>
                 </ul>
             </li>
             <li>
