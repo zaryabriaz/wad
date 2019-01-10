@@ -6,7 +6,7 @@
  * Time: 10:47 PM
  */
 
-require_once "../connections/db_connection.php";
+require_once "../Connections/db_connection.php";
 if(isset($_POST['insert_btn'])) {
     $pro_title = $_POST['cat_title'];
     $Query = "insert into categories(cname)
