@@ -2,6 +2,7 @@
 if(!isset($_SESSION['user_email'])){
     header('location: login.php?not_admin=You are not Admin!');
 }
+
 if(isset($_POST['insert_pro'])){
     //getting text data from the fields
     $pro_title = $_POST['pro_title'];
@@ -10,10 +11,12 @@ if(isset($_POST['insert_pro'])){
     $pro_price = $_POST['pro_price'];
     $pro_desc = $_POST['pro_desc'];
     $pro_keywords = $_POST['pro_keywords'];
+
     //getting image from the field
     $pro_image = $_FILES['pro_image']['name'];
     $pro_image_tmp = $_FILES['pro_image']['tmp_name'];
     move_uploaded_file($pro_image_tmp,"product_images/$pro_image");
+
     $insert_product = "insert into products (pro_cat, pro_brand,pro_title,pro_price,pro_desc,pro_image,pro_keywords) 
                   VALUES ('$pro_cat','$pro_brand','$pro_title','$pro_price','$pro_desc','$pro_image','$pro_keywords');";
     $insert_pro = mysqli_query($con, $insert_product);
@@ -138,3 +141,4 @@ if(isset($_POST['insert_pro'])){
         </div>
     </div>
 </form>
+
