@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-require "Connections/Functions.php";
+require "server/functions.php";
 ?>
 <html lang="en">
 <head>
@@ -124,7 +124,7 @@ require "Connections/Functions.php";
                             <div class="input-group-text"><i class="fas fa-user"></i></div>
                         </div>
                         <input type="text" class="form-control" id="c_name" name="c_name" placeholder="Enter your name"
-                               required pattern="((0?[1-9]|1[0-9]|2[0-9]|3[0-1])\.(0[1-9]|1[0-2])\.(19[0-9][0-9]|200[00-01]))">
+                               required pattern="abc">
                     </div>
                 </div>
                 <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto">
